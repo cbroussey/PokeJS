@@ -1,0 +1,2 @@
+# PokeJS
+Pokémon en JavaScript
