@@ -19,8 +19,22 @@
     <script src="JSON/type_effectiveness.js"></script>
     <!-- Main script -->
     <script src="poke.js"></script>
+    <!-- Display script -->
+    <script src="display.js"></script>
 </head>
 <body>
-    
+    <label for="function">Function: </label>
+    <select id="function">
+        <option value="getPokemonType">getPokemonByType</option>
+        <option value="getPokemonMoves">getPokemonByAttack</option>
+        <option value="getFastMoves">getAttacksByType</option>
+        <option value="getChargedMoves">sortPokemonByName</option>
+        <option value="getGeneration">sortPokemonByStamina</option>
+        <option value="getTypeEffectiveness">getWeakestEnnemies</option>
+        <option value="getCPMultiplier">getStrongestEnnemies</option>
+    </select>
+    <div id="params"></div>
+    <button id="run" onclick="runFn()">Run</button>
+    <pre id="result"></pre>
 </body>
 </html>

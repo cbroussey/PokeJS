@@ -52,6 +52,7 @@ class Pokemon {
         pokemon.filter(e => e["form"] == Pokemon.defaultForm).forEach(e => {
             if (!(e["pokemon_id"] in Pokemon.all_pokemons)) {
                 Pokemon.all_pokemons[e["pokemon_id"]] = {
+                    "id": e["pokemon_id"],
                     "name": e["pokemon_name"],
                     "form": e["form"],
                     "base_stamina": e["base_stamina"],
@@ -74,7 +75,6 @@ class Pokemon {
                         let attack = fast_moves.filter(e => e["name"] == f)[0]
                         Attack.all_attacks[attack["move_id"]] = attack
                         Attack.all_attacks[attack["move_id"]]["move_type"] = "Fast"
-                        delete Attack.all_attacks[attack["move_id"]]["move_id"]
                     }
                 })
                 Pokemon.all_pokemons[e["pokemon_id"]]["charged_moves"].forEach(f => {
@@ -83,7 +83,6 @@ class Pokemon {
                         Attack.all_attacks[attack["move_id"]] = attack
                         Attack.all_attacks[attack["move_id"]]["move_type"] = "Charged"
                         delete Attack.all_attacks[attack["move_id"]]["critical_chance"] // Unused here
-                        delete Attack.all_attacks[attack["move_id"]]["move_id"]
                     }
                 })
             } else {
@@ -183,16 +182,26 @@ function sortPokemonByStamina() {
 
 function getWeakestEnnemies(attack) {
     let attackType = new Attack(attack).type
-    let weakestMultiplier = Object.values(Type.all_types[attackType]).sort()[0]
-    let weakestTypes = Object.keys(Type.all_types[attackType]).filter(e => Type.all_types[attackType][e] == weakestMultiplier)
-    return Object.values(Pokemon.all_pokemons).filter(e => e["types"].filter(f => weakestTypes.includes(f)).length)
+    let weakest = []
+    Object.values(Pokemon.all_pokemons).forEach((e, f) => {
+        weakest.push({id : f, multiplier : Type.effectivenessCalc(attackType, e["types"])})
+    })
+    // The bigger the multiplier, the stronger the attack, the weaker the ennemy
+    weakest = weakest.sort((a, b) => a["multiplier"] > b["multiplier"] ? -1 : 1)
+    weakest = weakest.filter(e => e["multiplier"] == weakest[0]["multiplier"])
+    return weakest.map(e => Object.values(Pokemon.all_pokemons)[e["id"]])
 }
 
 function getStrongestEnnemies(attack) {
     let attackType = new Attack(attack).type
-    let strongestMultiplier = Object.values(Type.all_types[attackType]).sort((a, b) => a > b ? -1 : 1)[0]
-    let strongestTypes = Object.keys(Type.all_types[attackType]).filter(e => Type.all_types[attackType][e] == strongestMultiplier)
-    return Object.values(Pokemon.all_pokemons).filter(e => e["types"].filter(f => strongestTypes.includes(f)).length)
+    let strongest = []
+    Object.values(Pokemon.all_pokemons).forEach((e, f) => {
+        strongest.push({id : f, multiplier : Type.effectivenessCalc(attackType, e["types"])})
+    })
+    // The lower the multiplier, the weaker the attack, the stronger the ennemy
+    strongest = strongest.sort((a, b) => a["multiplier"] < b["multiplier"] ? -1 : 1)
+    strongest = strongest.filter(e => e["multiplier"] == strongest[0]["multiplier"])
+    return strongest.map(e => Object.values(Pokemon.all_pokemons)[e["id"]])
 }
 
 // In here, we are only going to use the normal form of each pokemon
