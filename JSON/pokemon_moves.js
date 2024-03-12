@@ -14989,7 +14989,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 736,
@@ -15002,7 +15002,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 737,
@@ -15015,7 +15015,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 738,
@@ -15028,7 +15028,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 739,
@@ -15041,7 +15041,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 740,
@@ -15054,7 +15054,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 742,
@@ -15067,7 +15067,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 743,
@@ -15096,7 +15096,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Dusk",
         "pokemon_id": 745,
@@ -15141,7 +15141,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "School",
         "pokemon_id": 746,
@@ -15154,7 +15154,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Solo",
         "pokemon_id": 746,
@@ -15167,7 +15167,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 747,
@@ -15180,7 +15180,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 748,
@@ -15193,7 +15193,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 749,
@@ -15206,7 +15206,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 750,
@@ -15219,7 +15219,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 751,
@@ -15232,7 +15232,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 752,
@@ -15245,7 +15245,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 753,
@@ -15258,7 +15258,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 754,
@@ -15271,7 +15271,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 755,
@@ -15284,7 +15284,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 756,
@@ -15297,7 +15297,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 757,
@@ -15310,7 +15310,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 758,
@@ -15323,7 +15323,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 759,
@@ -15336,7 +15336,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 760,
@@ -15349,7 +15349,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 761,
@@ -15362,7 +15362,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 762,
@@ -15375,7 +15375,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 763,
@@ -15404,7 +15404,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 765,
@@ -15417,7 +15417,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 766,
@@ -15430,7 +15430,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 767,
@@ -15443,7 +15443,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 768,
@@ -15456,7 +15456,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 769,
@@ -15469,7 +15469,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 770,
@@ -15482,7 +15482,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 771,
@@ -15495,7 +15495,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 772,
@@ -15508,7 +15508,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Bug",
         "pokemon_id": 773,
@@ -15521,7 +15521,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Dark",
         "pokemon_id": 773,
@@ -15534,7 +15534,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Dragon",
         "pokemon_id": 773,
@@ -15547,7 +15547,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Electric",
         "pokemon_id": 773,
@@ -15560,7 +15560,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Fairy",
         "pokemon_id": 773,
@@ -15573,7 +15573,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Fighting",
         "pokemon_id": 773,
@@ -15586,7 +15586,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Fire",
         "pokemon_id": 773,
@@ -15599,7 +15599,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Flying",
         "pokemon_id": 773,
@@ -15612,7 +15612,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Ghost",
         "pokemon_id": 773,
@@ -15625,7 +15625,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Grass",
         "pokemon_id": 773,
@@ -15638,7 +15638,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Ground",
         "pokemon_id": 773,
@@ -15651,7 +15651,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Ice",
         "pokemon_id": 773,
@@ -15664,7 +15664,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 773,
@@ -15677,7 +15677,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Poison",
         "pokemon_id": 773,
@@ -15690,7 +15690,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Psychic",
         "pokemon_id": 773,
@@ -15703,7 +15703,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Rock",
         "pokemon_id": 773,
@@ -15716,7 +15716,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Steel",
         "pokemon_id": 773,
@@ -15729,7 +15729,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Water",
         "pokemon_id": 773,
@@ -15742,7 +15742,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Blue",
         "pokemon_id": 774,
@@ -15755,7 +15755,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Green",
         "pokemon_id": 774,
@@ -15768,7 +15768,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Indigo",
         "pokemon_id": 774,
@@ -15781,7 +15781,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Meteor",
         "pokemon_id": 774,
@@ -15794,7 +15794,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Orange",
         "pokemon_id": 774,
@@ -15807,7 +15807,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Red",
         "pokemon_id": 774,
@@ -15820,7 +15820,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Violet",
         "pokemon_id": 774,
@@ -15833,7 +15833,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Yellow",
         "pokemon_id": 774,
@@ -15846,7 +15846,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 775,
@@ -15859,7 +15859,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 776,
@@ -15872,7 +15872,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 777,
@@ -15885,7 +15885,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Busted",
         "pokemon_id": 778,
@@ -15898,7 +15898,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Disguised",
         "pokemon_id": 778,
@@ -15911,7 +15911,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 779,
@@ -15924,7 +15924,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 780,
@@ -15937,7 +15937,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 781,
@@ -16015,7 +16015,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 786,
@@ -16028,7 +16028,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 787,
@@ -16041,7 +16041,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 788,
@@ -16054,7 +16054,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 789,
@@ -16067,7 +16067,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 790,
@@ -16080,7 +16080,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 791,
@@ -16093,7 +16093,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 792,
@@ -16106,7 +16106,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 793,
@@ -16119,7 +16119,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 794,
@@ -16132,7 +16132,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 795,
@@ -16145,7 +16145,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 796,
@@ -16158,7 +16158,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 797,
@@ -16171,7 +16171,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 798,
@@ -16184,7 +16184,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 799,
@@ -16197,7 +16197,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Dawn_wings",
         "pokemon_id": 800,
@@ -16210,7 +16210,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Dusk_mane",
         "pokemon_id": 800,
@@ -16223,7 +16223,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 800,
@@ -16236,7 +16236,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Ultra",
         "pokemon_id": 800,
@@ -16249,7 +16249,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 801,
@@ -16262,7 +16262,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Original_color",
         "pokemon_id": 801,
@@ -16275,7 +16275,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 802,
@@ -16288,7 +16288,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 803,
@@ -16301,7 +16301,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 804,
@@ -16314,7 +16314,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 805,
@@ -16327,7 +16327,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 806,
@@ -16340,7 +16340,7 @@ pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Struggle"
+            "Struggle Bug"
         ],
         "form": "Normal",
         "pokemon_id": 807,
