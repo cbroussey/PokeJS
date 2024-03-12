@@ -18,10 +18,11 @@ class Pokemon {
         this.base_stamina = Pokemon.all_pokemons[id]["base_stamina"]
         this.base_attack = Pokemon.all_pokemons[id]["base_attack"]
         this.base_defense = Pokemon.all_pokemons[id]["base_defense"]
+        this.types = Pokemon.all_pokemons[id]["types"]
     }
 
     getTypes() {
-        return new Type(this.id)
+        return this.types.map(e => new Type(e))
     }
 
     toString() {
@@ -29,6 +30,7 @@ class Pokemon {
     }
 
     static import_pokemons() {
+        /*
         Pokemon.all_pokemons = Object.fromEntries(pokemon.filter((e) => e["form"] == Pokemon.defaultForm).map(
             e => [e["pokemon_id"], {
                 "name": e["pokemon_name"],
@@ -39,12 +41,36 @@ class Pokemon {
                 "types": new Type(e["pokemon_id"]).types
             }]
         ));
+        */
+       // Filter all pokemons by default form and add them to the list
+        pokemon.filter(e => e["form"] == Pokemon.defaultForm).forEach(e => {
+            if (!(e["pokemon_id"] in Pokemon.all_pokemons)) {
+                Pokemon.all_pokemons[e["pokemon_id"]] = {
+                    "name": e["pokemon_name"],
+                    "form": e["form"],
+                    "base_stamina": e["base_stamina"],
+                    "base_attack": e["base_attack"],
+                    "base_defense": e["base_defense"],
+                    "types": pokemon_type.filter(f => f["pokemon_id"] == e["pokemon_id"] && f["form"] == Pokemon.defaultForm)[0]["type"]
+                }
+                Pokemon.all_pokemons[e["pokemon_id"]]["types"].forEach(f => {
+                    if (!(f in Type.all_types)) {
+                        //console.log("new type: " + f)
+                        Type.all_types[f] = type_effectiveness[f]
+                    }
+                })
+            } else {
+                // Modify this if you want to have multiple forms of the same pokemon
+                // Don't forget to remove the filter from the pokemon_type import
+                console.log("[W] Pokemon id " + e["pokemon_id"] + " already exists in the list")
+            }
+        })
     }
 }
 
 class Type {
     static all_types = {}
-    constructor(id/*, form*/) {
+    constructor(type/*, form*/) {
         //this.id = id
         /*
         this.form = form
@@ -55,7 +81,7 @@ class Type {
             console.log("[W] Form does not exist for this pokemon, using default form")
             tmp = tmp.filter((e) => e["form"] == "Normal")[0]
         }
-        */
+        
         let tmp = pokemon_type.filter((e) => e["pokemon_id"] == id && e["form"] == Pokemon.defaultForm)[0]
         this.types = tmp["type"]
         this.types.forEach(e => {
@@ -63,16 +89,19 @@ class Type {
                 Type.all_types[e] = type_effectiveness[e]
             }
         })
+        */
+        this.name = type
+        this.effectiveness = Type.all_types[type]
     }
 
-    static effectiveness(type, defenderTypes) {
+    static effectivenessCalc(type, defenderTypes) {
         let multiplier = 1
         defenderTypes.forEach(e => { multiplier *= Type.all_types[type][e] });
         return multiplier
     }
 
     toString() {
-        return `${this.types.join(", ")}`
+        return `${this.name}`
     }
     /*
     static import_types() {
