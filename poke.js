@@ -14,10 +14,10 @@ class Pokemon {
             tmp = tmp.filter((e) => e["form"] == "Normal")[0]
         }
         */
-        this.name = all_pokemons[id]["pokemon_name"]
-        this.base_stamina = all_pokemons[id]["base_stamina"]
-        this.base_attack = all_pokemons[id]["base_attack"]
-        this.base_defense = all_pokemons[id]["base_defense"]
+        this.name = Pokemon.all_pokemons[id]["name"]
+        this.base_stamina = Pokemon.all_pokemons[id]["base_stamina"]
+        this.base_attack = Pokemon.all_pokemons[id]["base_attack"]
+        this.base_defense = Pokemon.all_pokemons[id]["base_defense"]
     }
 
     getTypes() {
@@ -33,10 +33,10 @@ class Pokemon {
             e => [e["pokemon_id"], {
                 "name": e["pokemon_name"],
                 "form": e["form"],
-                "stamina": e["base_stamina"],
-                "attack": e["base_attack"],
-                "defense": e["base_defense"],
-                "types": new Type(e["pokemon_id"])
+                "base_stamina": e["base_stamina"],
+                "base_attack": e["base_attack"],
+                "base_defense": e["base_defense"],
+                "types": new Type(e["pokemon_id"]).types
             }]
         ));
     }
@@ -56,8 +56,13 @@ class Type {
             tmp = tmp.filter((e) => e["form"] == "Normal")[0]
         }
         */
-       let tmp = pokemon_type.filter((e) => e["pokemon_id"] == id && e["form"] == Pokemon.defaultForm)[0]
-       this.types = tmp["type"]
+        let tmp = pokemon_type.filter((e) => e["pokemon_id"] == id && e["form"] == Pokemon.defaultForm)[0]
+        this.types = tmp["type"]
+        this.types.forEach(e => {
+            if (!(e in Type.all_types)) {
+                Type.all_types[e] = type_effectiveness[e]
+            }
+        })
     }
 
     static effectiveness(type, defenderTypes) {
@@ -69,13 +74,13 @@ class Type {
     toString() {
         return `${this.types.join(", ")}`
     }
-
+    /*
     static import_types() {
         Type.all_types = type_effectiveness
-        /*Type.all_types = Object.fromEntries(type_effectiveness.map(
+        Type.all_types = Object.fromEntries(type_effectiveness.map(
             e => [e["pokemon_id"], [Pokemon.defaultForm, e["type1"], e["type2"]]]
-        ));*/
-    }
+        ));
+    }*/
 }
 
 class Attack {
