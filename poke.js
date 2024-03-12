@@ -159,4 +159,40 @@ class Attack {
     }
 }
 
+Pokemon.import_pokemons()
+
+function getPokemonByType(typeName) {
+    return Object.values(Pokemon.all_pokemons).filter(e => e["types"].includes(typeName))
+}
+
+function getPokemonByAttack(attackName) {
+    return Object.values(Pokemon.all_pokemons).filter(e => e["charged_moves"].includes(attackName) || e["fast_moves"].includes(attackName))
+}
+
+function getAttacksByType(typeName) {
+    return Object.values(Attack.all_attacks).filter(e => e["type"] == typeName)
+}
+
+function sortPokemonByName() {
+    return Object.values(Pokemon.all_pokemons).sort((a, b) => a["name"] < b["name"] ? -1 : a["name"] > b["name"] ? 1 : 0)
+}
+
+function sortPokemonByStamina() {
+    return Object.values(Pokemon.all_pokemons).sort((a, b) => b["base_stamina"] - a["base_stamina"])
+}
+
+function getWeakestEnnemies(attack) {
+    let attackType = new Attack(attack).type
+    let weakestMultiplier = Object.values(Type.all_types[attackType]).sort()[0]
+    let weakestTypes = Object.keys(Type.all_types[attackType]).filter(e => Type.all_types[attackType][e] == weakestMultiplier)
+    return Object.values(Pokemon.all_pokemons).filter(e => e["types"].filter(f => weakestTypes.includes(f)).length)
+}
+
+function getStrongestEnnemies(attack) {
+    let attackType = new Attack(attack).type
+    let strongestMultiplier = Object.values(Type.all_types[attackType]).sort((a, b) => a > b ? -1 : 1)[0]
+    let strongestTypes = Object.keys(Type.all_types[attackType]).filter(e => Type.all_types[attackType][e] == strongestMultiplier)
+    return Object.values(Pokemon.all_pokemons).filter(e => e["types"].filter(f => strongestTypes.includes(f)).length)
+}
+
 // In here, we are only going to use the normal form of each pokemon
