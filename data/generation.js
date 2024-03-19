@@ -4483,6 +4483,31 @@ generation = {
             "generation_number": 8,
             "id": 893,
             "name": "Zarude"
+},
+        {
+            "generation_number": 8,
+            "id": 894,
+            "name": "Regieleki"
+},
+        {
+            "generation_number": 8,
+            "id": 895,
+            "name": "Regidrago"
+},
+        {
+            "generation_number": 8,
+            "id": 896,
+            "name": "Glastrier"
+},
+        {
+            "generation_number": 8,
+            "id": 897,
+            "name": "Spectrier"
+},
+        {
+            "generation_number": 8,
+            "id": 898,
+            "name": "Calyrex"
 }
 ]
 }
