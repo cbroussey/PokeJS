@@ -1,3 +1,8 @@
+function setFn(caller) {
+    let cmd = caller.value.match(/[^ ]+(?=\()/gm)[0]
+    let args = eval(`${cmd}.toString()`).match(/^function [^ ]+( )*\([^\)]*\)/gm)[0]
+}
+
 function runFn() {
     let cmd = $("#function > option:selected").val()
     let args = [...$("#params > input").map((i,el) => el.value)]
@@ -85,6 +90,15 @@ function getStrongestEnnemies(attack) {
     strongest = strongest.sort((a, b) => a["multiplier"] < b["multiplier"] ? -1 : 1)
     strongest = strongest.filter(e => e["multiplier"] == strongest[0]["multiplier"])
     return strongest.map(e => Object.values(Pokemon.all_pokemons)[e["id"]])
+}
+
+function getBestAttackTypesForEnnemy(name) {
+    let attackType = []
+    Object.keys(Type.all_types).forEach(e => {
+        attackType.push({"type": e, "multiplier":Type.effectivenessCalc(e, Object.values(Pokemon.all_pokemons).filter(e => e["name"] == name)[0]["types"])})
+    })
+    let maxMult = attackType.sort((a, b) => a["multiplier"] < b["multiplier"])[0]["multiplier"]
+    return attackType.filter(e => e["multiplier"] == maxMult).map(e => e["type"])
 }
 
 $(document).ready(function() {
