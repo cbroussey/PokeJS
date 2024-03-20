@@ -16,10 +16,10 @@ class Attack {
         this.energy_delta = Attack.all_attacks[this.id]["energy_delta"]
         this.duration = Attack.all_attacks[this.id]["duration"]
         this.stamina_loss_scaler = Attack.all_attacks[this.id]["stamina_loss_scaler"]
-        //this.critical_chance = Attack.all_attacks[this.id]["critical_chance"]
+        //this.critical_chance = Attack.all_attacks[this.id]["critical_chance"] // Unused here, undefined in some attacks
     }
 
     toString() {
-        return `${this.name} (${this.move}) - ${this.type} - ${this.power} - ${this.energy_delta} - ${this.duration} - ${this.stamina_loss_scaler}`
+        return `${this.name} (${this.move_type}) - ${this.type} - ${this.power} - ${this.energy_delta} - ${this.duration} - ${this.stamina_loss_scaler}`
     }
 }

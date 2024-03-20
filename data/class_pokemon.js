@@ -29,11 +29,11 @@ class Pokemon {
     }
 
     getAttacks() {
-        return this.charged_moves.map(e => new Attack(e)).concat(this.fast_moves.map(e => new Attack(e)))
+        return this.charged_moves.map(e => new Attack(e)).concat(this.fast_moves.map(e => new Attack(e))) // Concatenation of fast and charged moves
     }
 
     toString() {
-        return `${this.name} (${this.form}) - ${this.base_stamina}/${this.base_attack}/${this.base_defense}`
+        return `${this.name} (${this.types.join(", ")}) - ${this.base_stamina}/${this.base_attack}/${this.base_defense}` // Form not described here since unused
     }
 
     static import_pokemons() {
