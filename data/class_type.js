@@ -25,13 +25,13 @@ class Type {
         this.effectiveness = Type.all_types[type]
     }
 
-    static effectivenessCalc(type, defenderTypes) {
+    static effectivenessCalc(type, defenderTypes) { // Calculate the effectiveness of a move on a pokemon (based on their types)
         let multiplier = 1
         defenderTypes.forEach(e => { multiplier *= Type.all_types[type][e] });
         return multiplier
     }
 
     toString() {
-        return `${this.name}`
+        return `${this.name}` // No need to display the effectivenesses here, would fill up the screen for no point
     }
 }
