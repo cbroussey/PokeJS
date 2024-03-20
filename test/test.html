@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokeJS</title>
-    <script src="../jquery-3.7.1.min.js"></script>
-    <!-- Data loading -->
-    <script src="../data/charged_moves.js"></script>
-    <script src="../data/cp_multiplier.js"></script>
-    <script src="../data/fast_moves.js"></script>
-    <script src="../data/generation.js"></script>
-    <script src="../data/pokemon_moves.js"></script>
-    <script src="../data/pokemon_type.js"></script>
-    <script src="../data/pokemon.js"></script>
-    <script src="../data/type_effectiveness.js"></script>
-    <!-- Classes -->
-    <script src="../data/class_attack.js"></script>
-    <script src="../data/class_type.js"></script>
-    <script src="../data/class_pokemon.js"></script>
-    <!-- Main script -->
-    <script src="test.js"></script>
-</head>
-<body>
-    <label for="function">Function: </label>
-    <select id="function">
-        <option value="getPokemonByType">getPokemonByType</option>
-        <option value="getPokemonByAttack">getPokemonByAttack</option>
-        <option value="getAttacksByType">getAttacksByType</option>
-        <option value="sortPokemonByName">sortPokemonByName</option>
-        <option value="sortPokemonByStamina">sortPokemonByStamina</option>
-        <option value="getWeakestEnnemies">getWeakestEnnemies</option>
-        <option value="getStrongestEnnemies">getStrongestEnnemies</option>
-        <option value="getBestAttackTypesForEnnemy">getBestAttackTypesForEnnemy</option>
-    </select>
-    <div id="params"></div>
-    <button id="run" onclick="runFn()">Run</button>
-    <p>Examples commands :</p>
-    <ul>
-        <li><a onclick="setFn(this)">getPokemonByType("Grass")</a></li>
-        <li><a onclick="setFn(this)">getPokemonByAttack("Vine Whip")</a></li>
-        <li><a onclick="setFn(this)">getAttacksByType("Water")</a></li>
-        <li><a onclick="setFn(this)">sortPokemonByName()</a></li>
-        <li><a onclick="setFn(this)">sortPokemonByStamina()</a></li>
-        <li><a onclick="setFn(this)">getWeakestEnnemies("Struggle Bug")</a></li>
-        <li><a onclick="setFn(this)">getStrongestEnnemies("Struggle")</a></li>
-        <li><a onclick="setFn(this)">getBestAttackTypesForEnnemy("Clefairy")</a></li>
-    </ul>
-    <pre id="result"></pre>
-    <style>
-        a {
-            cursor: pointer;
-        }
-    </style>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PokeJS</title>
+        <script src="../jquery-3.7.1.min.js"></script>
+        <!-- Data loading -->
+        <script src="../data/charged_moves.js"></script>
+        <script src="../data/cp_multiplier.js"></script>
+        <script src="../data/fast_moves.js"></script>
+        <script src="../data/generation.js"></script>
+        <script src="../data/pokemon_moves.js"></script>
+        <script src="../data/pokemon_type.js"></script>
+        <script src="../data/pokemon.js"></script>
+        <script src="../data/type_effectiveness.js"></script>
+        <!-- Classes -->
+        <script src="../data/class_attack.js"></script>
+        <script src="../data/class_type.js"></script>
+        <script src="../data/class_pokemon.js"></script>
+        <!-- Main script -->
+        <script src="test.js"></script>
+    </head>
+    <body>
+        <label for="function">Function: </label>
+        <select id="function">
+            <option value="getPokemonByType">getPokemonByType</option>
+            <option value="getPokemonByAttack">getPokemonByAttack</option>
+            <option value="getAttacksByType">getAttacksByType</option>
+            <option value="sortPokemonByName">sortPokemonByName</option>
+            <option value="sortPokemonByStamina">sortPokemonByStamina</option>
+            <option value="getWeakestEnnemies">getWeakestEnnemies</option>
+            <option value="getStrongestEnnemies">getStrongestEnnemies</option>
+            <option value="getBestAttackTypesForEnnemy">getBestAttackTypesForEnnemy</option>
+        </select>
+        <div id="params"></div>
+        <button id="run" onclick="runFn()">Run</button>
+        <p>Examples commands :</p>
+        <ul>
+            <li><a onclick="setFn(this)">getPokemonByType("Grass")</a></li>
+            <li><a onclick="setFn(this)">getPokemonByAttack("Vine Whip")</a></li>
+            <li><a onclick="setFn(this)">getAttacksByType("Water")</a></li>
+            <li><a onclick="setFn(this)">sortPokemonByName()</a></li>
+            <li><a onclick="setFn(this)">sortPokemonByStamina()</a></li>
+            <li><a onclick="setFn(this)">getWeakestEnnemies("Struggle Bug")</a></li>
+            <li><a onclick="setFn(this)">getStrongestEnnemies("Struggle")</a></li>
+            <li><a onclick="setFn(this)">getBestAttackTypesForEnnemy("Clefairy")</a></li>
+        </ul>
+        <pre id="result"></pre>
+        <style>
+            a {
+                cursor: pointer;
+            }
+        </style>
+    </body>
 </html>
