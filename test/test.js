@@ -98,7 +98,8 @@ function getBestAttackTypesForEnnemy(name) {
     Object.keys(Type.all_types).forEach(e => { // Calculate the effectiveness of every type on the ennemy
         attackType.push({"type": e, "multiplier":Type.effectivenessCalc(e, Object.values(Pokemon.all_pokemons).filter(e => e["name"] == name)[0]["types"])})
     })
-    let maxMult = attackType.sort((a, b) => a["multiplier"] < b["multiplier"])[0]["multiplier"]
+    // The bigger the multiplier, the stronger the attack, the weaker the ennemy
+    let maxMult = attackType.sort((a, b) => a["multiplier"] > b["multiplier"] ? -1 : 1)[0]["multiplier"]
     return attackType.filter(e => e["multiplier"] == maxMult).map(e => e["type"])
 }
 
