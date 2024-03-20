@@ -1,6 +1,13 @@
 function setFn(caller) {
-    let cmd = caller.value.match(/[^ ]+(?=\()/gm)[0]
-    let args = eval(`${cmd}.toString()`).match(/^function [^ ]+( )*\([^\)]*\)/gm)[0]
+    let cmd = caller.innerText.match(/^[^ \(]+/)[0]
+    let args = caller.innerText.match(/\([^\)]*/)[0].substring(1).split(",")
+    $("#function").val(cmd)
+    showArgs()
+    if (args[0] != "") {
+        args.forEach((e,i) => {
+            document.getElementById("params").children[i].value = e.substring(1, e.length-1)
+        })
+    }
 }
 
 function runFn() {
@@ -11,11 +18,8 @@ function runFn() {
         else args[i] = `'${el}'`
     })
     $("#result")[0].innerHTML = ""
-    //console.log(args)
     try {
         let res = eval(`${cmd}(${args.join(",")})`)
-        //console.log(res)
-        //console.log(res[0].toString())
         if (res == "") console.log("No results") //$("#result")[0].innerHTML = "No results"
         else {
             console.table(res)
@@ -32,12 +36,9 @@ function showArgs() {
     let cmd = $("#function > option:selected").val()
     let args = eval(`${cmd}.toString()`).match(/^function [^ ]+( )*\([^\)]*\)/gm)[0]
     args = args.substring(args.indexOf("(")+1,args.length-1).split(",")
-    //console.log(cmd)
-    //console.log(args)
     $("#params")[0].innerHTML = ""
     for (let i of args) {
         if (i != "") $("#params")[0].innerHTML += `<input type="text" placeholder="${i}">`
-        //console.log($("#params")[0].innerHTML)
     }
     document.querySelectorAll("#params > input").forEach(e => {
         e.addEventListener('keyup', (e) => {
@@ -103,7 +104,6 @@ function getBestAttackTypesForEnnemy(name) {
 
 $(document).ready(function() {
     $("#function").change(showArgs)
-    $("#run").click(runFn)
     showArgs()
     Pokemon.import_pokemons()
 })
