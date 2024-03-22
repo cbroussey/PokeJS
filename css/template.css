@@ -94,6 +94,8 @@ tr:last-child > td:last-child {
 th {
     border-top-width: 2px;
     font-weight: bold;
+    background-color: black;
+    color: white;
 }
 
 td:first-child, th:first-child {
