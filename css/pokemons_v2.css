@@ -50,6 +50,7 @@ table {
 
 :root {
     --table-radius: 5px;
+    --table-mw: 80%;
 }
 
 
@@ -57,15 +58,15 @@ body {
     /*display: flex;*/
     align-items: center;
     font-family: sans-serif;
+    padding: 1em;
 }
 
 table {
     border-collapse: separate;
-    min-width: 80%;
+    min-width: var(--table-mw);
     border-radius: var(--table-radius);
     border-spacing: 0;
-    margin: 1em auto
-
+    margin: auto;
 }
 
 th, td {
@@ -115,4 +116,73 @@ thead > tr {
     position: sticky;
     top: 0;
     background-color: white;
+}
+
+#tableNav {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    min-width: var(--table-mw);
+    margin: auto;
+    margin-top: 1em;
+    padding: 1em;
+    bottom: 0;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: var(--table-radius);
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --small-font: 12px;
+    }
+    table {
+        border-radius: 0;
+        width: 100%;
+    }
+    th, td {
+        padding: 4px;
+    }
+    body {
+        font-size: var(--small-font);
+    }
+    td > img {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #listGen, #listSta, #listAtt, #listDef, #listThumb {
+        font-size: 0;
+    }
+    #listGen::before {
+        content: 'Gen';
+        font-size: var(--small-font);
+    }
+    #listSta::before {
+        content: 'Base STA';
+        font-size: var(--small-font);
+    }
+    #listAtt::before {
+        content: 'Base ATT';
+        font-size: var(--small-font);
+    }
+    #listDef::before {
+        content: 'Base DEF';
+        font-size: var(--small-font);
+    }
+    #listThumb::before {
+        content: 'Thumb';
+        font-size: var(--small-font);
+    }
+}
+
+@media screen and (max-width: 450px){
+    :root {
+        --small-font: 9px;
+    }
+    #tableNav {
+        font-size: calc(var(--small-font) + 3px);
+    }
 }
