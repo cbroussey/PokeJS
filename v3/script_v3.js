@@ -48,4 +48,21 @@ $(document).ready(() => {
             document.body.scrollIntoView()
         }
     })
+    $("tbody >  tr").click(e => {
+        console.log(e.currentTarget.children[0].innerText)
+        $("body").css("overflow", "hidden") // Prevent scrolling
+        $("#popup").show(0, () => {
+            $("#popup").css("opacity", ".5")
+        })
+        $("#popup").click(() => {
+            document.getElementById("popup").addEventListener("transitionend", f => {
+                $("#popup").hide()
+                $("body").css("overflow", "auto") // Restore scrolling
+            }, {once: true})
+            $("#popup").css("opacity", "0")
+        })
+        $("#detailsPopup").show(0, () => {
+            $("#detailsPopup").css("opacity", "1")
+        })
+    })
 })

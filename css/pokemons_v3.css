@@ -134,6 +134,14 @@ thead > tr {
     border-radius: var(--table-radius);
 }
 
+tbody > tr {
+    transition: background-color var(--transition) ease;
+}
+
+tbody > tr:hover {
+    background-color: #CCC;
+}
+
 #popup {
     display: none;
     position: fixed;
@@ -144,7 +152,20 @@ thead > tr {
     opacity: 0;
     background-color: #000;
     transition: opacity var(--transition) ease-in;
+}
 
+#detailsPopup {
+    display: none;
+    position: fixed;
+    opacity: 0;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    border-radius: 1em;
+    margin: auto;
+    background-color: white;
+    transition: opacity var(--transition) ease-in;
 }
 
 @media screen and (max-width: 800px) {
