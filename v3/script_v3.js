@@ -59,10 +59,19 @@ $(document).ready(() => {
                 $("#popup").hide()
                 $("body").css("overflow", "auto") // Restore scrolling
             }, {once: true})
+            document.getElementById("detailsPopup").addEventListener("transitionend", f => {
+                $("#detailsPopup").hide()
+            }, {once: true})
             $("#popup").css("opacity", "0")
+            $("#detailsPopup").css("transform", "")
+            $("#detailsPopup").css("opacity", "0")
         })
+        let pkmn = new Pokemon(e.currentTarget.children[0].innerText)
+        $("#detailsPopup > img").attr("src", "../webp/images/" + (pkmn.id < 100 ? "0" : "") + (pkmn.id < 10 ? "0" : "") + pkmn.id + ".webp")
         $("#detailsPopup").show(0, () => {
+            $("#detailsPopup").css("display", "flex")
             $("#detailsPopup").css("opacity", "1")
+            $("#detailsPopup").css("transform", "translateY(0)")
         })
     })
 })

@@ -159,13 +159,20 @@ tbody > tr:hover {
     position: fixed;
     opacity: 0;
     width: 50%;
-    height: 50%;
-    top: 25%;
+    height: 60%;
+    top: 20%;
     left: 25%;
     border-radius: 1em;
     margin: auto;
+    padding: 1em;
     background-color: white;
-    transition: opacity var(--transition) ease-in;
+    transform: translateY(30%);
+    transition: opacity var(--transition) ease-in, transform var(--transition) ease-out;
+}
+
+#detailsPopup> img {
+    height: 50%;
+    
 }
 
 @media screen and (max-width: 800px) {
@@ -184,6 +191,15 @@ tbody > tr:hover {
     }
     td > img {
         width: 50px;
+    }
+    #detailsPopup {
+        width: 80%;
+        height: 60%;
+        top: 20%;
+        left: 10%;
+    }
+    #detailsPopup > img {
+        height: 40%;
     }
 }
 
