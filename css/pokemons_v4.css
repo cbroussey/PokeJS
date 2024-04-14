@@ -336,6 +336,30 @@ ul > li {
     color: gray;
 }
 
+h1 {
+    font-weight: bolder;
+    font-size: 4em;
+    text-align: center;
+    align-self: center;
+}
+
+#filterSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    vertical-align: middle;
+}
+
+#filterSection > * {
+    margin: .2em;
+}
+
+#filterSection > h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
 @media screen and (max-width: 1100px) {
     #detailsGeneral {
         height: 70%;

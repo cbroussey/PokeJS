@@ -45,23 +45,24 @@ function detailsPopup(e) {
     $("#detailsGen").text("(Gen " + pkmn.generation + ")")
     $("#detailsTypes")[0].innerHTML = "<h3>Types: </h3>"
     pkmn.types.forEach(f => {
-        $("#detailsTypes")[0].innerHTML += "<p style='background-color: " + typeColors[f] + "'>" + f + "</p>"
+        $("#detailsTypes").append("<p style='background-color: " + typeColors[f] + "'>" + f + "</p>")
     })
     $("#detailsAtt").text(pkmn.base_attack)
-    $("#detailsAtt")[0].innerHTML += "<div class='tooltiptext'>Attack</div>"
+    $("#detailsAtt").append("<div class='tooltiptext'>Attack</div>")
     $("#detailsDef").text(pkmn.base_defense)
-    $("#detailsDef")[0].innerHTML += "<div class='tooltiptext'>Defense</div>"
+    $("#detailsDef").append("<div class='tooltiptext'>Defense</div>")
     $("#detailsSta").text(pkmn.base_stamina)
-    $("#detailsSta")[0].innerHTML += "<div class='tooltiptext'>Stamina</div>"
+    $("#detailsSta").append("<div class='tooltiptext'>Stamina</div>")
     $("#detailsFast > ul").empty()
     pkmn.fast_moves.forEach(f => {
-        $("#detailsFast > ul")[0].innerHTML += "<li class='tooltip'>" + f
-        + "<div class='tooltiptext'>Power: " + new Attack(f).power + "</div></li>"
+        $("#detailsFast > ul").append("<li class='tooltip'>" + f
+        + "<div class='tooltiptext'>Power: " + new Attack(f).power + "</div></li>")
+        // Power is the only given move stat that is useful to display here
     })
     $("#detailsCharged > ul").empty()
     pkmn.charged_moves.forEach(f => {
-        $("#detailsCharged > ul")[0].innerHTML += "<li class='tooltip'>" + f
-        + "<div class='tooltiptext'>Power: " + new Attack(f).power + "</div></li>"
+        $("#detailsCharged > ul").append("<li class='tooltip'>" + f
+        + "<div class='tooltiptext'>Power: " + new Attack(f).power + "</div></li>")
         // Power is the only given move stat that is useful to display here
     })
     $("#detailsPopup").show(0, () => {
@@ -87,10 +88,10 @@ function imgPopup(e) {
     popupImg.style.top = top + 'px';
 }
 
-function displayList(page = 0) {
+function displayList(page = 0, pkmns = Object.values(Pokemon.all_pokemons)) {
+    $("#pokeList > tbody").empty()
     $("#prev").prop("disabled", false)
     $("#next").prop("disabled", false)
-    let pkmns = Object.values(Pokemon.all_pokemons)
     for (let n = page * dispAmount; n < pkmns.length && n < (page+1) * dispAmount; n++) {
         let pkrow = document.createElement("tr")
         Object.values(document.querySelectorAll("#pokeList > thead > tr > th")).forEach(i => {
@@ -122,9 +123,24 @@ function displayList(page = 0) {
         }
     });
     $("#pageNum").text("Page " + (page + 1) + "/" + Math.ceil(pkmns.length / dispAmount))
-    if (page == 0) $("#prev").prop("disabled", true)
-    if (page == Math.ceil(pkmns.length / dispAmount)-1) $("#next").prop("disabled", true)
+    if (page <= 0) $("#prev").prop("disabled", true)
+    if (page >= Math.ceil(pkmns.length / dispAmount)-1) $("#next").prop("disabled", true)
     sessionStorage.page = page // We don't want to save the page accross sessions
+}
+
+function applyFilters(page = 0) {
+    let gen = $("#genFilter").val()
+    gen = gen == "" ? 0 : parseInt(gen)
+    let type = $("#typeFilter").val()
+    let name = $("#nameFilter").val()
+    let filtered = Object.values(Pokemon.all_pokemons)
+    if (gen != 0)
+        filtered = filtered.filter(e => e.generation == gen)
+    if (type != "")
+        filtered = filtered.filter(e => e.types.includes(type))
+    if (name != "")
+        filtered = filtered.filter(e => e.name.toLowerCase().includes($("#nameFilter").val().toLowerCase()))
+    displayList(page, gen || type != "" || name != "" ? filtered : Object.values(Pokemon.all_pokemons))
 }
 
 $(document).ready(() => {
@@ -135,17 +151,32 @@ $(document).ready(() => {
         let page = parseInt($("#pageNum").text().split(" ")[1].split("/")[0]) - 1
         if (page > 0) {
             $("#pokeList > tbody").empty()
-            displayList(page - 1)
+            applyFilters(page - 1)
             document.body.scrollIntoView()
         }
     })
     $("#next").click(() => {
         let page = parseInt($("#pageNum").text().split(" ")[1].split("/")[0]) - 1
-        if (page < Math.floor(Object.values(Pokemon.all_pokemons).length / dispAmount)) {
+        if (page < $("#pageNum").text().split("/")[1] - 1){
             $("#pokeList > tbody").empty()
-            displayList(page + 1)
+            applyFilters(page + 1)
             document.body.scrollIntoView()
         }
     })
-    
+    let gens = new Set(Object.values(Pokemon.all_pokemons).map(e => e.generation))
+    gens.forEach(e => {
+        $("#genFilter").append("<option value='" + e + "'>Gen " + e + "</option>")
+    })
+    Object.keys(Type.all_types).forEach(e => {
+        $("#typeFilter").append("<option value='" + e + "'>" + e + "</option>")
+    })
+    $("#genFilter").change(() => {
+        applyFilters()
+    })
+    $("#typeFilter").change(() => {
+        applyFilters()
+    })
+    $("#nameFilter").keyup(() => {
+        applyFilters()
+    })
 })
