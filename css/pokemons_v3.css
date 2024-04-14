@@ -270,8 +270,15 @@ tbody > tr:hover {
 
 
 #detailsMoves {
+    height: 100%;
     justify-content: space-around;
     padding: 1em;
+    padding-top: 1.5em;
+    overflow: auto;
+}
+
+#detailsMoves > div {
+    overflow: scroll;
 }
 
 #detailsMoves ul {
