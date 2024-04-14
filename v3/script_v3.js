@@ -68,6 +68,24 @@ function detailsPopup(e) {
     })
 }
 
+function imgPopup(e) {
+    // Create new img element
+    let popupImg = document.createElement('img');
+    popupImg.src = e.currentTarget.src.replace("thumbnails", "images");
+    popupImg.id = 'popupImg';
+    popupImg.style.position = 'fixed';
+    popupImg.style.backgroundColor = 'white';
+    popupImg.style.border = '2px solid black';
+    popupImg.style.top = (e.currentTarget.getBoundingClientRect().top - 50) + 'px';
+    popupImg.style.left = (e.currentTarget.offsetParent.getBoundingClientRect().left - e.currentTarget.offsetParent.offsetWidth - 60) + 'px';
+    popupImg.style.width = '200px';
+    popupImg.style.height = '200px';
+    popupImg.style.padding = '1em';
+    popupImg.style.borderRadius = '1em';
+    //popupImg.style.zIndex = 1000;
+    document.body.appendChild(popupImg);
+}
+
 function displayList(page = 0) {
     $("#prev").prop("disabled", false)
     $("#next").prop("disabled", false)
@@ -91,6 +109,17 @@ function displayList(page = 0) {
     $("tbody >  tr").click(e => {
         detailsPopup(e)
     })
+    $("tbody > tr > td > img").mouseover(function(e) {
+        imgPopup(e)
+    });
+
+    $("tbody > tr > td > img").mouseout(function() {
+        // Remove the popup image when the mouse leaves the thumbnail
+        let popupImg = document.querySelector('#popupImg');
+        if (popupImg) {
+            popupImg.remove();
+        }
+    });
     $("#pageNum").text("Page " + (page + 1) + "/" + Math.ceil(pkmns.length / dispAmount))
     if (page == 0) $("#prev").prop("disabled", true)
     if (page == Math.ceil(pkmns.length / dispAmount)-1) $("#next").prop("disabled", true)

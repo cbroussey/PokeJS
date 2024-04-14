@@ -278,7 +278,16 @@ tbody > tr:hover {
 }
 
 #detailsMoves > div {
-    overflow: scroll;
+    min-width: 9em;
+    overflow: auto;
+    padding-right: 1em;
+}
+
+#detailsMoves > div > h3 {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding-bottom: 5px;
 }
 
 #detailsMoves ul {
