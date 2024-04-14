@@ -55,11 +55,14 @@ function detailsPopup(e) {
     $("#detailsSta")[0].innerHTML += "<div class='tooltiptext'>Stamina</div>"
     $("#detailsFast > ul").empty()
     pkmn.fast_moves.forEach(f => {
-        $("#detailsFast > ul")[0].innerHTML += "<li>" + f + "</li>"
+        $("#detailsFast > ul")[0].innerHTML += "<li class='tooltip'>" + f
+        + "<div class='tooltiptext'>Power: " + new Attack(f).power + "</div></li>"
     })
     $("#detailsCharged > ul").empty()
     pkmn.charged_moves.forEach(f => {
-        $("#detailsCharged > ul")[0].innerHTML += "<li>" + f + "</li>"
+        $("#detailsCharged > ul")[0].innerHTML += "<li class='tooltip'>" + f
+        + "<div class='tooltiptext'>Power: " + new Attack(f).power + "</div></li>"
+        // Power is the only given stat that is useful to give out
     })
     $("#detailsPopup").show(0, () => {
         $("#detailsPopup").css("display", "flex")
@@ -69,21 +72,19 @@ function detailsPopup(e) {
 }
 
 function imgPopup(e) {
-    // Create new img element
     let popupImg = document.createElement('img');
     popupImg.src = e.currentTarget.src.replace("thumbnails", "images");
     popupImg.id = 'popupImg';
-    popupImg.style.position = 'fixed';
-    popupImg.style.backgroundColor = 'white';
-    popupImg.style.border = '2px solid black';
-    popupImg.style.top = (e.currentTarget.getBoundingClientRect().top - 50) + 'px';
-    popupImg.style.left = (e.currentTarget.offsetParent.getBoundingClientRect().left - e.currentTarget.offsetParent.offsetWidth - 60) + 'px';
-    popupImg.style.width = '200px';
-    popupImg.style.height = '200px';
-    popupImg.style.padding = '1em';
-    popupImg.style.borderRadius = '1em';
-    //popupImg.style.zIndex = 1000;
+    let top = (e.target.getBoundingClientRect().top - Math.round(e.target.offsetWidth/2))
+    if (top < 0) top = 50
+    console.log(popupImg)
+    console.log(window.innerHeight)
+    popupImg.style.top = top + 'px';
+    popupImg.style.right = $("html").width() - (e.target.offsetParent.getBoundingClientRect().left - 10) + 'px';
     document.body.appendChild(popupImg);
+    console.log(popupImg.getBoundingClientRect().bottom)
+    if (popupImg.getBoundingClientRect().bottom > window.innerHeight) top = window.innerHeight - popupImg.height - 50
+    popupImg.style.top = top + 'px';
 }
 
 function displayList(page = 0) {
