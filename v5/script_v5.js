@@ -87,7 +87,7 @@ function imgPopup(e) { // Display a bigger image when hovering over a thumbnail
     popupImg.style.top = top + 'px';
 }
 
-function displayList(page = 0, pkmns = Object.values(Pokemon.all_pokemons)) {
+function displayList(page = 0, pkmns = Object.values(Pokemon.all_pokemons)) { // Display the table
     $("#pokeList > tbody").empty()
     $("#prev").prop("disabled", false)
     $("#next").prop("disabled", false)
@@ -101,7 +101,7 @@ function displayList(page = 0, pkmns = Object.values(Pokemon.all_pokemons)) {
                 pkcell.innerText = pkcell.innerText.replace(",", ", ")
             } else {
                 let pkimg = document.createElement("img")
-                // Thumbnail needs to be made of 3 digits, so we add 0s if needed
+                // Thumbnail's name needs to be made of 3 digits, so we add 0s if needed
                 pkimg.src = "../webp/thumbnails/" + (pkmns[n]["id"] < 100 ? "0" : "") + (pkmns[n]["id"] < 10 ? "0" : "") + pkmns[n]["id"] + ".webp"
                 pkcell.appendChild(pkimg)
             }
