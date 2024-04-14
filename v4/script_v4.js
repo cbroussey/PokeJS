@@ -141,7 +141,7 @@ function applyFilters(page = 0) {
     if (name != "")
         filtered = filtered.filter(e => e.name.toLowerCase().includes($("#nameFilter").val().toLowerCase()))
     displayList(page, gen || type != "" || name != "" ? filtered : Object.values(Pokemon.all_pokemons))
-    sessionStorage.gen = gen
+    sessionStorage.gen = gen ? gen.toString() : ""
     sessionStorage.type = type
     sessionStorage.name = name
 }
@@ -152,10 +152,17 @@ $(document).ready(() => {
     let gen = sessionStorage.gen
     let type = sessionStorage.type
     let name = sessionStorage.name
-    $("#nameFilter").val(name)
-    $("#genFilter").val(gen)
-    $("#typeFilter").val(type)
-    displayList(pg == null ? 0 : parseInt(pg));
+    let gens = new Set(Object.values(Pokemon.all_pokemons).map(e => e.generation))
+    gens.forEach(e => {
+        $("#genFilter").append("<option value='" + e + "'>Gen " + e + "</option>")
+    })
+    Object.keys(Type.all_types).forEach(e => {
+        $("#typeFilter").append("<option value='" + e + "'>" + e + "</option>")
+    })
+    if (name != null) $("#nameFilter").val(name)
+    if (gen != null) $("#genFilter").val(gen)
+    if (type != null) $("#typeFilter").val(type)
+    applyFilters(pg == null ? 0 : parseInt(pg));
     $("#prev").click(() => {
         let page = parseInt($("#pageNum").text().split(" ")[1].split("/")[0]) - 1
         if (page > 0) {
@@ -171,13 +178,6 @@ $(document).ready(() => {
             applyFilters(page + 1)
             document.body.scrollIntoView()
         }
-    })
-    let gens = new Set(Object.values(Pokemon.all_pokemons).map(e => e.generation))
-    gens.forEach(e => {
-        $("#genFilter").append("<option value='" + e + "'>Gen " + e + "</option>")
-    })
-    Object.keys(Type.all_types).forEach(e => {
-        $("#typeFilter").append("<option value='" + e + "'>" + e + "</option>")
     })
     $("#genFilter").change(() => {
         applyFilters()
