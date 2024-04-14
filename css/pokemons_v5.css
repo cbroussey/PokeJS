@@ -425,22 +425,26 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-    #listGen, #listSta, #listAtt, #listDef, #listThumb {
+    #listGen > a:not(.orderPoint),
+    #listSta > a:not(.orderPoint),
+    #listAtt > a:not(.orderPoint),
+    #listDef > a:not(.orderPoint),
+    #listThumb > a:not(.orderPoint) {
         font-size: 0;
     }
-    #listGen::before {
+    #listGen > a:not(.orderPoint)::before {
         content: 'Gen';
         font-size: var(--small-font);
     }
-    #listSta::before {
+    #listSta > a:not(.orderPoint)::before {
         content: 'Base STA';
         font-size: var(--small-font);
     }
-    #listAtt::before {
+    #listAtt > a:not(.orderPoint)::before {
         content: 'Base ATT';
         font-size: var(--small-font);
     }
-    #listDef::before {
+    #listDef > a:not(.orderPoint)::before {
         content: 'Base DEF';
         font-size: var(--small-font);
     }

@@ -81,12 +81,9 @@ function imgPopup(e) {
     popupImg.id = 'popupImg';
     let top = (e.target.getBoundingClientRect().top - Math.round(e.target.offsetWidth/2))
     if (top < 0) top = 50
-    console.log(popupImg)
-    console.log(window.innerHeight)
     popupImg.style.top = top + 'px';
     popupImg.style.right = $("html").width() - (e.target.offsetParent.getBoundingClientRect().left - 10) + 'px';
     document.body.appendChild(popupImg);
-    console.log(popupImg.getBoundingClientRect().bottom)
     if (popupImg.getBoundingClientRect().bottom > window.innerHeight) top = window.innerHeight - popupImg.height - 50
     popupImg.style.top = top + 'px';
 }
@@ -100,7 +97,7 @@ function displayList(page = 0, pkmns = Object.values(Pokemon.all_pokemons)) {
         Object.values(document.querySelectorAll("#pokeList > thead > tr > th")).forEach(i => {
             let pkcell = document.createElement("td")
             if (i.innerText.toLowerCase() != "thumbnail") {
-                pkcell.innerText = pkmns[n][i.innerText.toLowerCase().replaceAll(" ▲", "").replaceAll(" ▼", "").replace(" ", "_")]
+                pkcell.innerText = pkmns[n][i.querySelector("a:not(.orderPoint)").innerText.toLowerCase().replace(" ", "_")]
                 pkcell.innerText = pkcell.innerText.replace(",", ", ")
             } else {
                 let pkimg = document.createElement("img")
@@ -151,12 +148,29 @@ function applyFilters(page = 0) {
                 return a[ordering[0]] < b[ordering[0]] ? 1 : a[ordering[0]] > b[ordering[0]] ? -1 : a["name"] > b["name"]
             }
         })
-        console.log(filtered)
     }
     displayList(page, ordering[0] != "" || gen || type != "" || name != "" ? filtered : Object.values(Pokemon.all_pokemons))
     sessionStorage.gen = gen ? gen.toString() : ""
     sessionStorage.type = type
     sessionStorage.name = name
+}
+
+function applyOrdering(e) {
+    e.preventDefault()
+    $(".ordering > .orderPoint").text("")
+    document.querySelector(".ordering")?.classList.remove("ordering")
+    e = e.target
+    if (e.tagName == "A") e = e.parentNode
+    console.log(e)
+    e.classList.add("ordering")
+    let order = $(".ordering > a:not('orderPoint')").text().toLowerCase().replaceAll("▲", "").replaceAll("▼", "").replace(" ", "_")
+    if (ordering[0] == order) {
+        ordering[1] = ordering[1] == 0 ? 1 : 0
+    } else {
+        ordering = [order, 0]
+    }
+    applyFilters()
+    $(".ordering > .orderPoint").text(ordering[1] == 0 ? "▲" : "▼")
 }
 
 $(document).ready(() => {
@@ -202,16 +216,6 @@ $(document).ready(() => {
         applyFilters()
     })
     $("thead > tr > th:not(:last-child)").click(e => {
-        $(".ordering").text(document.querySelector(".ordering")?.innerText.replaceAll(" ▲", "").replaceAll(" ▼", ""))
-        document.querySelector(".ordering")?.classList.remove("ordering")
-        e.target.classList.add("ordering")
-        let order = e.target.innerText.toLowerCase().replaceAll(" ▲", "").replaceAll(" ▼", "").replace(" ", "_")
-        if (ordering[0] == order) {
-            ordering[1] = ordering[1] == 0 ? 1 : 0
-        } else {
-            ordering = [order, 0]
-        }
-        applyFilters()
-        e.target.innerText += ordering[1] == 0 ? " ▲" : " ▼"
+        applyOrdering(e)
     })
 })
