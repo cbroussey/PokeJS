@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PokeJS</title>
+        <link rel="stylesheet" href="../css/pokemons_v5.css">
+        <script src="../jquery-3.7.1.min.js"></script>
+        <!-- Data loading -->
+        <script src="../data/charged_moves.js"></script>
+        <script src="../data/cp_multiplier.js"></script>
+        <script src="../data/fast_moves.js"></script>
+        <script src="../data/generation.js"></script>
+        <script src="../data/pokemon_moves.js"></script>
+        <script src="../data/pokemon_type.js"></script>
+        <script src="../data/pokemon.js"></script>
+        <script src="../data/type_effectiveness.js"></script>
+        <!-- Classes -->
+        <script src="../data/class_attack.js"></script>
+        <script src="../data/class_type.js"></script>
+        <script src="../data/class_pokemon.js"></script>
+        <!-- Main script -->
+        <script src="script_v5.js"></script>
+    </head>
+    <body>
+        <h1>PokeJS</h1>
+        <div id="filterSection">
+            <h2>Filters:</h2>
+            <div>
+                <label for="genFilter">Generation:</label>
+                <select id="genFilter">
+                    <option value="">All</option>
+                </select>
+            </div>
+            <div>
+                <label for="typeFilter">Type:</label>
+                <select id="typeFilter">
+                    <option value="">All</option>
+                </select>
+            </div>
+            <div>
+                <label for="nameFilter">Name:</label>
+                <input type="text" id="nameFilter" placeholder="Name">
+            </div>
+        </div>
+        <table id="pokeList">
+            <thead>
+                <tr>
+                    <th id="listID">ID</th>
+                    <th id="listName">Name</th>
+                    <th id="listGen">Generation</th>
+                    <th id="listTypes">Types</th>
+                    <th id="listSta">Base Stamina</th>
+                    <th id="listAtt">Base attack</th>
+                    <th id="listDef">Base defense</th>
+                    <th id="listThumb">Thumbnail</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <nav id="tableNav">
+            <button id="prev">Previous</button>
+            <p id="pageNum"></p>
+            <button id="next">Next</button>
+        </nav>
+        <div id="popup"></div>
+        <div id="detailsPopup">
+            <div id="detailsGeneral">
+                <img id="detailsImg">
+                <div id="detailsByImg">
+                    <div id="detailsInfos">
+                        <h2 id="detailsName"></h2>
+                        <div>
+                            <p id="detailsForm"></p>
+                            <p id="detailsGen"></p>
+                        </div>
+                    </div>
+                    <div id="detailsTypes">
+                        <h3>Types: </h3>
+                    </div>
+                    <div id="detailsStats">
+                        <h3>Stats: </h3>
+                        <p id="detailsAtt" class="tooltip"></p>
+                        <p id="detailsDef" class="tooltip"></p>
+                        <p id="detailsSta" class="tooltip"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="detailsHint">Hint: hover over a stat or an attack to get more details</div>
+            <div id="detailsMoves">
+                <div id="detailsFast">
+                    <h3>Fast moves: </h3>
+                    <ul></ul>
+                </div>
+                <div id="detailsCharged">
+                    <h3>Charged moves: </h3>
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
