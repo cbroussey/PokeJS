@@ -21,7 +21,6 @@ const typeColors = {
 }
 
 function detailsPopup(e) {
-    //console.log(e.currentTarget.children[0].innerText)
     $("body").css("overflow", "hidden") // Prevent scrolling
     $("#popup").show(0, () => {
         $("#popup").css("opacity", ".5")
@@ -77,12 +76,9 @@ function imgPopup(e) {
     popupImg.id = 'popupImg';
     let top = (e.target.getBoundingClientRect().top - Math.round(e.target.offsetWidth/2))
     if (top < 0) top = 50
-    console.log(popupImg)
-    console.log(window.innerHeight)
     popupImg.style.top = top + 'px';
     popupImg.style.right = $("html").width() - (e.target.offsetParent.getBoundingClientRect().left - 10) + 'px';
     document.body.appendChild(popupImg);
-    console.log(popupImg.getBoundingClientRect().bottom)
     if (popupImg.getBoundingClientRect().bottom > window.innerHeight) top = window.innerHeight - popupImg.height - 50
     popupImg.style.top = top + 'px';
 }
