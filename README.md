@@ -1,6 +1,8 @@
 # PokeJS
 Création d'un Pokédex en JavaScript avec prévisualisation, tri, filtres, recherche, et plus encore
 
+Information : Je ne suis en aucun cas affilié avec GameFreak ou Nintendo, les images contenues dans le projet nous ont été fournies par les professeurs. Si elle posent problème, je peux les retirer entièrement du repository à tout moment sur notice adressée personnellement.
+
 ## Liens rapides :
 Accès au site : https://cbroussey.github.io/PokeJS
 
@@ -30,4 +32,9 @@ Chaque version devait également avoir été bugtestée et commentée en conséq
 ## Ce qui a été réalisé
 Sur la page publiée (voir [ici](https://cbroussey.github.io)) on peut retrouver toutes les itérations du logiciel et les tester individuellement, la v5 étant considérée comme la version finale.
 
+Le site fonctionne entièrement en local et ne fait des requêtes que pour récupérer le code et les images. J'ai rajouté quelques fonctionnalités personnelles dans quelques versions (exemple : la v5 inclus un système de cookie qui garde en mémoire la page actuelle pour cette session uniquement)
+
 ## Les acquis
+- Autonomie
+- Développement par itérations
+- Gestion du temps
