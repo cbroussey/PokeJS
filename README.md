@@ -3,7 +3,7 @@ Création d'un Pokédex en JavaScript avec prévisualisation, tri, filtres, rech
 
 Information : Je ne suis en aucun cas affilié avec GameFreak ou Nintendo, les images contenues dans le projet nous ont été fournies par les professeurs. Si elle posent problème, je peux les retirer entièrement du repository à tout moment sur notice adressée personnellement.
 
-## Liens rapides :
+## Liens utiles :
 Accès au site : https://cbroussey.github.io/PokeJS
 
 Puis, cliquer sur l'un des liens suivant :
